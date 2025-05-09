@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme base {
+
+}
+@layer base {
+
+
+    .attribution { font-size: 11px; position: absolute; bottom: 0; left: 40vw; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+}
