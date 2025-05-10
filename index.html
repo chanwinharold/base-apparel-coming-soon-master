@@ -12,30 +12,31 @@
 </head>
 <body>
 
-<main>
-    <section>
-        <img src="images/logo.svg" alt="Base Apparel logo">
+<header class="px-8 lg:px-32 py-12 col-1 row-1">
+    <img src="images/logo.svg" alt="Base Apparel logo">
+</header>
 
-        <h1>We're coming soon</h1>
+<picture class="col-2 row-start-1 row-end-3">
+    <source srcset="images/hero-desktop.jpg" media="(min-width: 40rem)">
+    <source srcset="images/hero-mobile.jpg" media="(max-width: 40rem)">
+    <img class="w-full h-full" src="images/hero-desktop.jpg" alt="A girl picture">
+</picture>
 
-        <p>Hello fellow shoppers! We're currently building our new fashion store.
+<main class="px-8 py-20 lg:px-32 col-1 row-2 text-center md:text-left">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl tracking-widest px-4! uppercase"><span class="text-customDesaturatedRed">We're</span> coming soon</h1>
+
+    <p class="text-customDesaturatedRed py-8">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <form>
-            <label>
-                <input placeholder="Email Address">
-                <span></span>
-            </label>
-            <button><img src="images/icon-arrow.svg" alt="arrow button"></button>
-        </form>
-    </section>
-
-    <section>
-        <!-- image here -->
-    </section>
+    <form method="post">
+        <label class="relative">
+            <input class="w-full h-[50px] px-8 placeholder:text-customDarkGrayishRed border-1 border-customDesaturatedRed rounded-4xl outline-0" id="email" type="email" name="email" placeholder="Email Address"><img class="absolute -top-1 right-25 error" src="images/icon-error.svg" alt="error"><span class="absolute top-10 left-5 text-xs text-customSoftRed error">Please provide a valid email</span>
+            <button class="absolute w-20 h-[50px] bg-linear-[135deg] from-red-400 to-red-200 transition-all hover:cursor-pointer hover:scale-125 active:opacity-50 right-0 rounded-4xl shadow-xl hover:from-red-100 shadow-customDesaturatedRed"><img class="m-auto" src="images/icon-arrow.svg" alt="arrow button"></button>
+        </label>
+    </form>
 </main>
 
-<footer>
+<footer hidden>
     <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://github.com/chanwinharold" target="_blank">chanwinharold</a>.

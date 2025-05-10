@@ -1,11 +1,50 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 @theme base {
+    /*Primary*/
+    --color-customDesaturatedRed: hsl(0, 36%, 70%);
+    --color-customSoftRed: hsl(0, 93%, 68%);
 
+    /*Neutral*/
+    --color-customDarkGrayishRed: hsl(0, 6%, 24%);
+
+    --text-shadow-xl: rgba(50, 50, 93, 0.1) 0 50px 100px -20px, rgba(0, 0, 0, 0.15) 0 30px 60px -30px;
 }
 @layer base {
+    body {
+        font-family: "Josefin Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
+        background: url("images/bg-pattern-desktop.svg");
 
+        @apply sm:max-h-[100vh];
+        @media screen and (min-width: 48rem) {
+            display: grid;
+            grid-template-rows: 1fr 9fr;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (min-width: 64rem) {
+            grid-template-columns: 3fr 2fr;
+        }
+    }
 
+    input:invalid {
+        border: 2px solid var(--color-customSoftRed) !important;
+
+        & + img {
+            display: inline-block !important;
+        }
+        & + img + span {
+            display: inline-block !important;
+        }
+
+    }
+
+    .error {
+        display: none;
+    }
     .attribution { font-size: 11px; position: absolute; bottom: 0; left: 40vw; }
     .attribution a { color: hsl(228, 45%, 44%); }
 }
